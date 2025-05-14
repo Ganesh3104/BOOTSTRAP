@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="container-fluid">
+
+     <header>
+     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container-fluid">
+    <h2 class="navbar-brand text-center mt-2"> <img src="../nareshit/images/logo.jpg" height="40" width="40" class="rounded rounded-circle" alt=""> Naresh IT</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between ms-5" id="mainMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class=" bi bi-house-door nav-link" href="./index.html"> Home</a></li>
+        <li class="nav-item"><a class="bi bi-question-circle nav-link" href="./about.html"> About</a></li>
+        <li class="nav-item"><a class=" bi bi-question-circle nav-link" href="./services.html"> Service</a></li>
+        <li class="nav-item"><a class=" bi bi-phone nav-link" href="./contact.html"> Contact</a></li>
+      </ul>
+
+      
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-box-arrow-in-right"></i> Sign in
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" data-bs-theme="dark">
+            <li><a class="dropdown-item bi bi-box-arrow-in-right" href="./login.html"> Sign in</a></li>
+            <li><a class="dropdown-item bi bi-person-fill-add" href="./register.html"> Sign Up</a></li>
+            <li><a class="dropdown-item bi bi-lock" href="./password.html"> Change Password</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<div class="container my-4">
+  <div class="card">
+    <div class="card-header text-center bg-primary">
+      <h4 class="mb-0 ">Course Details</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-secondary">
+            <tr>
+              <th>ID</th>
+              <th>Course</th>
+              <th>Faculty</th>
+              <th>Duration</th>
+              <th>Timing</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Angular 8</td>
+              <td>Sudhakar Sharma</td>
+              <td>45 days</td>
+              <td>07:30 AM</td>
+              <td>
+                <button class="btn btn-warning btn-sm viewmodal bi bi-eye" data-bs-toggle="modal" data-bs-target="#angular"> View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Node Js</td>
+              <td>Samba</td>
+              <td>45 days</td>
+              <td>09:00 AM</td>
+              <td>
+                <button class="btn btn-warning btn-sm viewmodal bi bi-eye" data-bs-toggle="modal" data-bs-target="#node"> View</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Java</td>
+              <td>Hari Krishna</td>
+              <td>60 days</td>
+              <td>04:30 PM</td>
+              <td>
+                <button class="btn btn-warning btn-sm viewmodal bi bi-eye" data-bs-toggle="modal" data-bs-target="#java"> View </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="angular" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="courseModalLabel">Course Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-2"><strong>Course:</strong> <span id="cname">Angular 8</span></div>
+        <div class="mb-2"><strong>Faculty:</strong> <span id="fname">Sudhakar Sharma</span></div>
+        <div class="mb-2"><strong>Duration:</strong> <span id="duration"> 45 days</span></div>
+        <div class="mb-2"><strong>Timing:</strong> <span id="time">11:00am</span></div>
+        <div class="mb-2"><strong>Description:</strong> <span id="desc">Angular 8 is a client-side TypeScript based framework used to create dynamic web applications.</span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger bi bi-x-circle" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="node" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="courseModalLabel">Course Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-2"><strong>Course:</strong> <span id="cname">Node js</span></div>
+        <div class="mb-2"><strong>Faculty:</strong> <span id="fname">Samba</span></div>
+        <div class="mb-2"><strong>Duration:</strong> <span id="duration"> 45 days</span></div>
+        <div class="mb-2"><strong>Timing:</strong> <span id="time">09:00am</span></div>
+        <div class="mb-2"><strong>Description:</strong> <span id="desc">"Node.js connects the ease of JavaScript with Unix network programming, built on the Google V8 engine.</span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger bi bi-x-circle" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="java" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="courseModalLabel">Course Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-2"><strong>Course:</strong> <span id="cname">Java</span></div>
+        <div class="mb-2"><strong>Faculty:</strong> <span id="fname">Hari Krishna</span></div>
+        <div class="mb-2"><strong>Duration:</strong> <span id="duration"> 60 days</span></div>
+        <div class="mb-2"><strong>Timing:</strong> <span id="time">04:30am</span></div>
+        <div class="mb-2"><strong>Description:</strong> <span id="desc">Java is an object-oriented language developed by Sun Microsystems, executed via the JVM.</span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger bi bi-x-circle" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+//   // JavaScript to fill modal data
+//   document.querySelectorAll('.viewmodal').forEach(button => {
+//     button.addEventListener('click', () => {
+//       document.getElementById('cname').textContent = button.getAttribute('data-course');
+//       document.getElementById('fname').textContent = button.getAttribute('data-faculty');
+//       document.getElementById('duration').textContent = button.getAttribute('data-duration');
+//       document.getElementById('time').textContent = button.getAttribute('data-time');
+//       document.getElementById('desc').textContent = button.getAttribute('data-desc');
+//     });
+//   });
+</script>
+
+
+
+
+ <footer class="bg-dark " style="height: 250px; width: 100%; color: white; font-size: 15px;">
+  <h5 class="d-flex justify-content-center py-3">Naresh Technologies</h5>
+  <div class="row pt-4 ">
+    <div class="col" style="padding-left: 100px;">
+    <ul>
+      <li class="pb-2 bi bi-facebook"> Facebook</li>
+      <li class="pb-2 bi bi-envelope-fill"> Mail</li>
+      <li class="pb-2 bi bi-twitter"> Twitter</li>
+      <li class="pb-2 bi bi-youtube"> Youtube</li>
+    </ul>
+    </div>
+
+     <div  class="col">
+      <ul>
+      <li class="pb-2">Home</li>
+      <li class="pb-2">About</li>
+      <li class="pb-2">Service</li>
+      <li class="pb-2">Contact</li>
+    </ul>
+    </div>
+   
+
+     <div class="col">
+      <ul>
+      <li class="pb-2">Name : Naresh Istitute</li>
+      <li class="pb-2">Email : info@nareshit.com</li>
+      <li class="pb-2">Contact : +91-xxxxxxxxxx</li>
+      <li class="pb-2">Address : Sr nagar, Hyderabad, Telangana, India</li>
+    </ul>
+     </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
