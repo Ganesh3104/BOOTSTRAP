@@ -43,93 +43,102 @@
 </nav>
 </header>
 
-<main class="mb-4 pb-4">
+<main class="container my-5">
+  <div class="row justify-content-center align-items-start">
 
-  
-  <img src="../nareshit/images/user.png"width="150" height="150" alt="Login Image" style="float: right; margin-right: 100px;">
 
-   
- <div class="log container mt-5  border rounded-3 p-4" style="box-shadow: 5px 5px 10px 10px black; width: 35%;">
-  <form method="POST" action="#">
-      <div class="col-12 text-center">
-        <h3 class="text-dark pb-4" style="text-shadow: 2px 2px 4px #333;">
-          <label>Registration Form</label>
-        </h3>
-    </div>
+    <div class="col-12 col-md-8 col-lg-6 mb-4">
+      <div class="p-4 border rounded-3" style="box-shadow: 5px 5px 10px 10px black;">
+        <form method="POST" action="#" enctype="multipart/form-data">
+          <div class="text-center mb-4">
+            <h3 class="text-dark" style="text-shadow: 2px 2px 4px #333;">Registration Form</h3>
+          </div>
 
-    <div class="row mb-3 pt-4">
-        <label for="username" class="form-label fw-bold">Full Name:</label>
-          <input type="text" class="form-control" id="username" placeholder="Full Name" name="username" required>
-      </div>
+          <div class="mb-3">
+            <label for="username" class="form-label fw-bold">Full Name:</label>
+            <input type="text" class="form-control" id="username" placeholder="Full Name" name="username" required>
+          </div>
 
-      <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Email:</label>
+          <div class="mb-3">
+            <label for="emailid" class="form-label fw-bold">Email:</label>
             <input type="email" class="form-control" id="emailid" placeholder="Email Id" name="emailid" required>
-     </div>
+          </div>
 
+          <div class="mb-3">
+            <label for="phone" class="form-label fw-bold">Mobile:</label>
+            <input type="text" class="form-control" id="phone" placeholder="Contact Number" name="phone" required
+              pattern="[7-9]{1}[0-9]{9}" maxlength="10"
+              title="The contact number must be 10 digits and start with 7, 8, or 9."
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+          </div>
 
-       <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Mobile:</label>
-           <input type="text" class="form-control" id="phone" placeholder="Contact Number" name="phone" required pattern="[7-9]{1}[0-9]{9}" maxlength="10" title="The contact number must enter 10 digits number and number start with 7 or 8 or 9." oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
-      </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label fw-bold">Date:</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+          </div>
 
-      <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Date:</label>
-           <input type="date" class="form-control"  id="dob" placeholder="Date" name="dob" required>
-      </div>
+          <div class="mb-3">
+            <label for="file" class="form-label fw-bold">Image:</label>
+            <input type="file" class="form-control" id="file" name="file" accept=".png, .jpg, .jpeg" required onchange="readURL(this);">
+          </div>
 
-       <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Image:</label>
-          <input type="file" name="file" placeholder="Image" accept=".png, .jpg, .jpeg" onchange="readURL(this);" required>
-      </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fw-bold">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+              minlength="6" maxlength="10" required
+              title="Password must be between 6 and 10 characters.">
+          </div>
 
-      
-       <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Password:</label>
-          <input type="password" class="form-control" id="password" placeholder="Password" name="password" minlength="6" maxlength="10" required title="the password enter must above 6 and below 10 characters only.">
-      </div>
+          <div class="mb-3">
+            <label for="confirmpassword" class="form-label fw-bold">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password"
+              name="confirmpassword" minlength="6" maxlength="10" required onChange="fun1(this.value)"
+              title="Password must be between 6 and 10 characters.">
+          </div>
 
-      
-       <div class="row mb-4">
-        <label for="password" class="form-label fw-bold">Confirm Password:</label>
-           <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" minlength="6" maxlength="10" onChange="fun1(this.value)" title="the password enter must above 6 and below 10 characters only." required>
-      </div>
-
-      
-        <div class="col-xs-12 col-sm-12 form-group pb-2">
-           <label class="fw-bold">Gender :</label>
-              <input type="radio" id="gender" name="gender" value="male" required> Male
-              <input type="radio" id="gender" name="gender" value="female" required> Female
+          <div class="mb-3">
+            <label class="fw-bold d-block">Gender :</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="genderMale" name="gender" value="male" required>
+              <label class="form-check-label" for="genderMale">Male</label>
             </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="genderFemale" name="gender" value="female" required>
+              <label class="form-check-label" for="genderFemale">Female</label>
+            </div>
+          </div>
 
-            <div class="row">
-    <div class="col-xs-12 col-sm-12">
-         <div class="checkbox">
-          <label><input type="checkbox" id="terms" name="terms" required> I've read and Accept the 
-                <a href="#myModal"  data-toggle="modal" data-target="" class="text-danger">Terms and Conditions</a></label>                       
-         </div>
-    </div>
-</div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+            <label class="form-check-label" for="terms">I've read and Accept the
+              <a href="#myModal" data-toggle="modal" class="text-danger">Terms and Conditions</a>
+            </label>
+          </div>
 
-       <div class="d-flex justify-content-between pt-4 pb-1">
-      <div class="col-xs-12 col-sm-10">
-  <a href="login.html"><button type="button" name="submit" class="btn btn-warning btn-md pull-left">Already you have an account</button></a>   
+          <div class="d-flex justify-content-between pt-3">
+            <a href="login.html" class="btn btn-warning">
+              Already have an account
+            </a>
+            <button type="submit" class="btn btn-success" id="submitbtn">
+              Register
+            </button>
+          </div>
+        </form>
       </div>
-    <div class="col-xs-12 col-sm-10">
-      <button type="submit" class="btn btn-success btn-md pull-right" id="submitbtn"><span>Register</span></button>
     </div>
-    </div>   
-  </form>
-</div>
 
+    
+    <div class="col-12 col-md-4 col-lg-3 text-center mt-4 mt-md-0">
+      <img src="../nareshit/images/user.png" class="img-fluid" alt="User Image" style="max-width: 180px; max-height: 180px;">
+    </div>
 
-
-
+  </div>
 </main>
 
+
    
 
-    <footer class="bg-dark " style="height: 250px; width: 100%; color: white; font-size: 15px;">
+    <footer class="bg-dark " style="min-height: 250px; width: 100%; color: white; font-size: 15px;">
   <h5 class="d-flex justify-content-center py-3">Naresh Technologies</h5>
   <div class="row pt-4 ">
     <div class="col" style="padding-left: 100px;">
